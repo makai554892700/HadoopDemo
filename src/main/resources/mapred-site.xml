@@ -1,0 +1,28 @@
+<configuration>
+  <property>
+    <name>mapreduce.framework.name</name>
+    <value>yarn</value>
+  </property>
+  <property>
+    <name>mapred.remote.os</name>
+    <value>Linux</value>
+  </property>
+  <property>
+    <name>mapreduce.app-submission.cross-platform</name>
+    <value>true</value>
+  </property>
+  <property>
+    <name>mapreduce.application.classpath</name>
+    <value>
+      /bigdata/hadoop-3.0.0-beta1/etc/hadoop,
+      /bigdata/hadoop-3.0.0-beta1/share/hadoop/common/*,
+      /bigdata/hadoop-3.0.0-beta1/share/hadoop/common/lib/*,
+      /bigdata/hadoop-3.0.0-beta1/share/hadoop/hdfs/*,
+      /bigdata/hadoop-3.0.0-beta1/share/hadoop/hdfs/lib/*,
+      /bigdata/hadoop-3.0.0-beta1/share/hadoop/mapreduce/*,
+      /bigdata/hadoop-3.0.0-beta1/share/hadoop/mapreduce/lib/*,
+      /bigdata/hadoop-3.0.0-beta1/share/hadoop/yarn/*,
+      /bigdata/hadoop-3.0.0-beta1/share/hadoop/yarn/lib/*
+    </value>
+  </property>
+</configuration>
