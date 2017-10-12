@@ -1,6 +1,6 @@
 #Hadoop Hellow world 项目
 # hadoop官网: http://hadoop.apache.org/
-# jdk官网: 
+# jdk官网: http://www.oracle.com/technetwork/java/javase/downloads/index.html
 * 测试 hellow world (仅CENTOS7下有小)
     * 创建虚拟机(细节可自行百度)
     * 下载 hadoop-3.0.0-beta1.tar.gz 文件 (wget https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop-3.0.0-beta1/hadoop-3.0.0-beta1.tar.gz)
