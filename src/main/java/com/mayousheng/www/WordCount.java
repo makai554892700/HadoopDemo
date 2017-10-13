@@ -56,13 +56,26 @@ public class WordCount {
 
     public static void main(String[] args) throws Exception {
         System.out.println("main start.....");
-        String input = "hdfs://localhost:9000/test/temp.txt";
-        String output = "hdfs://localhost:9000/test/result";
+        String input;
+        String output;
+        if (args == null) {
+            System.out.println("args is null.....");
+            System.exit(0);
+            return;
+        } else {
+            if (args.length == 2) {
+                input = args[0];
+                output = args[1];
+            } else {
+                for (String arg : args) {
+                    System.out.println("arg=" + arg);
+                }
+                System.exit(0);
+                return;
+            }
+        }
         JobConf conf = new JobConf(WordCount.class);
         conf.setJobName("WordCount");
-//        conf.addResource("classpath:/hadoop/core-site.xml");
-//        conf.addResource("classpath:/hadoop/hdfs-site.xml");
-//        conf.addResource("classpath:/hadoop/mapred-site.xml");
         conf.setOutputKeyClass(Text.class);
         conf.setOutputValueClass(IntWritable.class);
         conf.setMapperClass(WordCountMapper.class);
